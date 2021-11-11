@@ -1,0 +1,22 @@
+#app4 .circle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+@keyframes change {
+    0% {
+        background-color: red;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+
+/* 激活状态下动画才生效 */
+
+#app4 .circle.active {
+    animation: change 1s infinite alternate linear;
+}

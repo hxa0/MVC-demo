@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}body {
+    overflow: hidden;
+}
+
+body>.page {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body>.page>section {
+    width: 50vw;
+    height: 50vh;
+    border: 1px solid grey;
+}#app2 {
+    width: 50vw;
+    height: 50vh;
+}
+
+#app2 .tab-bar {
+    display: flex;
+}
+
+#app2 .tab-bar>li {
+    width: 50%;
+    border: 3px solid black;
+}
+
+#app2 .tab-content>li {
+    display: none;
+}
+
+#app2 .tab-content>li.active {
+    display: block;
+}
+
+#app2 .tab-bar>li.selected {
+    background-color: yellow;
+    color: red;
+}#app3 .square {
+    border: 1px solid black;
+    margin-top: 10vw;
+    margin-left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    transition: 1s;
+}
+
+#app3 .square.active {
+    transform: translateX(15vw);
+}#app4 .circle {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+@keyframes change {
+    0% {
+        background-color: red;
+    }
+    100% {
+        background-color: blue;
+    }
+}
+
+
+/* 激活状态下动画才生效 */
+
+#app4 .circle.active {
+    animation: change 1s infinite alternate linear;
+}
